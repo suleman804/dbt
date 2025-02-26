@@ -1,0 +1,35 @@
+name: "suleman"
+version: "1.0.0"
+config-version: 2
+
+profile: suleman
+
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["data_tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+packages-install-path: "dbt-modules"
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+require-dbt-version: [">=1.9.0", "<1.10.0"]
+
+
+flags:
+  send_anonymous_usage_stats: false
+  use_colors: true
+  partial_parse: false
+  write_json: true
+  warn_error: true
+  debug: false
+  version_check: true
+  fail_fast: true
+  use_experimental_parser: false
+
+vars:
+  start_date: '2025-01-01'

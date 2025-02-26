@@ -1,0 +1,13 @@
+suleman:
+  outputs:
+    dev:
+      dataset: utils
+      job_execution_timeout_seconds: 900
+      job_retries: 1
+      location: EU
+      method: oauth
+      priority: interactive
+      project: yet-found-out
+      threads: 10
+      type: bigquery
+  target: '{{ env_var("DBT_ENV_TARGET", "dev") }}'
